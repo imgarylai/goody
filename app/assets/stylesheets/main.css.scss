@@ -1,0 +1,503 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.navbar{
+	position: fixed;
+	margin-left:2%;
+	width:960px;
+	margin-right:5%;
+	z-index:99;
+}
+
+.container{
+	font-size:14px;
+	position:relative;
+	width:960px;
+	left:30%;
+	right:10%;
+	top:50px;
+	z-index:-6;
+	font-family:"微軟正黑體", "Microsoft JhengHei", "儷黑 Pro",LiHei Pro,Helvetica, sans-serif;
+}
+
+.row {
+  margin-left: -20px;
+  *zoom: 1;
+}
+
+.row:before,
+.row:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.row:after {
+  clear: both;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+//----------------index----------------//
+
+#menu{
+	color:#E0E0E0;
+	font-family:"微軟正黑體", "Microsoft JhengHei", "儷黑 Pro",LiHei Pro,Helvetica, sans-serif;
+	font-size:14px;
+	letter-spacing:6px;
+}
+.item li{
+	float:left;
+	background:url(menu/menu.png) repeat-x top;
+	padding:0px 17px 0px 17px;
+	margin:0 auto;
+	list-style-type:none;
+	line-height:30px;
+	cursor:pointer;
+}
+.item li > a,
+.item a:visited{
+	float: none;
+	text-decoration:none;
+	color:#F17F5B;
+	text-align:center;
+	display:block;
+	padding-top:5px;
+}
+	   
+.item li a:hover{
+	display:block;
+	float:left;
+	background:url(menu/menu2.png) no-repeat top;
+	overflow:hidden;
+	color:#F17F5B;
+	margin:0 auto;
+}
+
+#bgnoise{
+	position:absolute;
+	margin:0px;
+	background-size:cover;
+	width:100%;
+	height:95%;
+	background-image: url(slider/noise.png);
+	filter:alpha(opacity=50,Style=0);
+	
+}
+
+#slider{
+	position:absolute;
+	z-index:-4;
+	padding:0px;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+}
+
+.show1{
+	background:url(slider/1.jpg) no-repeat scroll 0 0 transparent;
+	background-size:cover;
+	width:100%;
+	height:95%;
+	margin:0px;
+	box-shadow:2px 2px 5px 2px rgba(20%,20%,20%,0.2);
+}
+
+.show2{
+	background:url(slider/2.jpg) no-repeat scroll 0 0 transparent;
+	background-size:cover;
+	width:100%;
+	height:95%;
+	margin:0px;
+	box-shadow:2px 2px 5px 2px rgba(20%,20%,20%,0.2);
+}
+
+.show3{
+	background:url(slider/3.jpg) no-repeat scroll 0 0 transparent;
+	background-size:cover;
+	width:100%;
+	height:95%;
+	margin:0px;
+	box-shadow:2px 2px 5px 2px rgba(20%,20%,20%,0.2);
+}
+#prev{
+	position:absolute;
+	z-index:5;
+	top:88%;
+	left:30px;
+	width:40px;
+	height:40px;
+	background-image:url(slider/prev2.png);
+	background-repeat: no-repeat;
+	cursor:pointer;
+}
+
+#next{
+	position:absolute;
+	z-index:5;
+	top:88%;
+	right:10px;
+	width:50px;
+	height:50px;
+	background-image:url(slider/next2.png);
+	background-repeat: no-repeat;
+	cursor:pointer;
+}
+
+#todayreminder{
+	position:fixed;
+	display:block;
+	z-index:8;
+	left:60%;
+	top:30%;
+  width: 400px;
+  height: 395px;
+	background-image:url(slider/today.png);
+	background-repeat:no-repeat;
+}
+
+#sale-info-box{
+	position:fixed;
+	z-index:99;
+	left:2%;
+	padding:10px;
+	top:250px;
+	width:251px;
+	height:257px;
+	font-family:"微軟正黑體", "Microsoft JhengHei", "儷黑 Pro",LiHei Pro,Helvetica, sans-serif;
+}
+
+#sale{
+	position:absolute;
+	left:17px;
+	top:0px;
+	width:143px;
+	height:60px;
+	background-image:url(stucker/stucker01.png);
+}
+
+#sale-info-date{
+	position:absolute;
+	top:0px;
+	right:2px;
+	width:109px;
+	height:60px;
+	background-position: right;
+	background-image:url(stucker/stucker02.png);
+	background-repeat:no-repeat;
+	font-family:  Georgia, "Times New Roman", Times, serif\9;
+	font-size:14px;
+	color: #F17F5B;
+	text-align:left;
+	line-height:80px;
+	text-indent: 10px;
+	}
+	
+#sale-info-title{
+	position: absolute;
+	left:17px;
+	top:60px;
+	width:251px;
+	height:32px;
+	background-image: url(stucker/stucker03.png);
+	background-repeat:no-repeat;
+	font-size:22px;
+	letter-spacing:2px;
+	text-align:left;
+	line-height:32px;
+	text-indent: 26px;
+	font-weight:bold;
+	color: #2D3C40;
+}
+
+#sale-info-line{
+	position: absolute;
+	left:17px;
+	top:92px;
+	width:251px;
+	height:9px;
+	background-image: url(stucker/stucker04.png);
+	background-repeat:no-repeat;
+}
+
+#sale-info-content{
+	position: absolute;
+	left:17px;
+	top:101px;
+	width:191px;
+	height:76px;
+	padding:3px 61px 0px 26px;
+	background-image: url(stucker/stucker05.png);
+	background-repeat:no-repeat;
+	font-size:12px;
+	line-height:18px;
+	color: #2D3C40;	
+}
+
+#sale-info-price{
+	position: absolute;
+	left:17px;
+	top:177px;
+	width:251px;
+	height:32px;
+	background-image: url(stucker/stucker06.png);
+	background-repeat:no-repeat;
+	/*font-family: 'Handlee', cursive;*/font-family:  Georgia, "Times New Roman", Times, serif;
+	font-size:27px;
+	color: #F17F5B;
+	text-align:left;
+	line-height:32px;
+	padding-left:130px;
+}
+
+#sale-info-buy{
+	position: absolute;
+	left:17px;
+	top:209px;
+	width:251px;
+	height:54px;
+	background-image: url(stucker/stucker07.png);
+	background-repeat:no-repeat;
+	cursor:pointer;
+}
+
+#sale-info-quantity{
+	display:none;
+	position: absolute;
+	left:17px;
+	top:101px;
+	width:251px;
+	height:108px;
+	background-image: url(stucker/stuckerhover.png);
+	background-repeat:no-repeat;
+	font-family:  Georgia, "Times New Roman", Times, serif;
+	font-size:50px;
+	text-align:center;
+	line-height:95px;
+	color:#F7E4D9;
+	z-index:2;
+}
+
+//----------------about----------------//
+
+.about-section{
+	height:100%;
+}
+.about-title{
+
+}
+
+.about-content{
+	width:450px;
+}
+
+.about-content p{
+	line-height:30px;
+}
+
+.material{
+
+	width:200px;
+	float:left;
+	margin-left:20px;
+	line-height:20px;
+	height:400px;
+}
+.material-title{
+	padding:5px;
+}
+.material-content{
+	padding:5px;
+}
+
+.about-bg{
+	position:relative;
+	z-index:-7;
+}
+.about-bg2{
+	position:relative;
+	margin-top:-640px;
+	z-index:-6;
+}
+#sidetitle{
+	position:fixed;
+	z-index:99;
+	left:2%;
+	top:245px;
+	width:251px;
+	background-color:#063;
+	height: 50px;
+	background:url(menu/sidemenu1.png) no-repeat center;
+	font-family:"微軟正黑體", "Microsoft JhengHei", "儷黑 Pro",LiHei Pro,Helvetica, sans-serif;
+	color:#F17F5B;
+	letter-spacing:7px;
+	line-height:50px;
+	text-indent:30px;
+	padding:10px;
+}
+	
+#sidemenu{
+	position:fixed;
+	padding:15px;
+	z-index:99;
+	left:2%;
+	top:300px;
+	width:251px;
+	height:150px;
+	color:#E0E0E0;
+	font-family:"微軟正黑體", "Microsoft JhengHei", "儷黑 Pro",LiHei Pro,Helvetica, sans-serif;
+	font-size:14px;
+	letter-spacing:7px;
+	line-height:30px;
+	text-indent:-10px;
+}
+.subitem li{
+	text-align:left;
+	background:url(menu/sidemenu2.png) no-repeat left;
+	height:35px;
+	list-style-type:none;
+	margin:0;
+	padding:0px;
+	vertical-align:center;
+	padding: 0 0 0 40px;
+	cursor:pointer;
+}
+
+.subitem li a,item a:visited{
+	color:#F17F5B;
+	text-align:left;
+	display:block;
+	text-decoration:none;
+}
+	   
+.subitem li a:hover{
+	display:block;
+	background:url(menu/sidemenu2.png) repeat-y right;
+	height:35px;
+	color:#F17F5B;
+	margin:0; padding:0;
+	float:left;
+	width:200px;
+	list-style-type:none;
+	text-indent:-10px;
+}
+
+#headershadow{
+	position:fixed;
+	top:0;
+	left:0;
+	height:89px;
+	width:100%;
+	background-image:url(bg/headershadow.png) ;
+	z-index:-5;
+
+}
+
+#faq{
+	;
+	position:absolute;
+	top:50px;
+	left:250px;
+	width:600px;
+	height:400px;
+	font-family:"微軟正黑體", "Microsoft JhengHei", "儷黑 Pro",LiHei Pro,Helvetica, sans-serif;
+	font-size: 13px;
+	color:#594F4B;
+}
+	
+#faqtitle{
+	position:absolute;
+	top:55px;
+	left:125px;
+	background-image: url(faq/faqtitle.png);	
+	width:205px;
+	height:57px;
+}
+	
+#faqboard{
+	position:absolute;
+	top:150px;
+	left:160px;
+	width:711px;
+	height:483px;
+}
+
+	
+#contact{
+	;
+	position:absolute;
+	top:50px;
+	left:250px;
+	width:600px;
+	height:400px;
+	font-family:"微軟正黑體", "Microsoft JhengHei", "儷黑 Pro",LiHei Pro,Helvetica, sans-serif;
+	font-size: 13px;
+	color:#594F4B;
+}
+
+#contacttitle{
+	position:absolute;
+	top:55px;
+	left:125px;
+	background-image: url(contact/contacttitle.png);	
+	width:205px;
+	height:57px;
+}
+
+#contactintro{
+	position:absolute;
+	top:150px;
+	left:160px;
+	width:711px;
+	height:253px;
+	background-image:url(contact/stucker.png);
+	text-indent:20px;
+	line-height:50px;
+	vertical-align:central;
+}
+
+#phone{
+	position:absolute;
+	top:160px;
+	left:120px;
+	width:200px;
+	height:53px;
+	}
+	
+#mail{
+	position:absolute;
+	top:160px;
+	left:305px;
+	width:200px;
+	height:53px;
+	}
+	
+#contactbg{
+	position:absolute;
+	bottom:0;
+	left:0px;
+	z-index:-5;
+	background-image:url(contact/contactbg.png);
+	width:724px;
+	height:600px;	
+}
+
+
+#copyright{
+	position:absolute;
+	z-index:99;
+	width:300px;
+	height:10px;
+	right:0px;
+	line-height:10px;
+	font-size:10px;
+	color: #594F4B;
+	float:right;
+}

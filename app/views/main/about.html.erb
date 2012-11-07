@@ -1,0 +1,131 @@
+<%= render :partial => 'main/header' %> 
+<% material = [
+{
+	:title => "法國總統牌奶油",
+	:content => "嚴選最佳牛乳產區布列塔尼的牛乳所精煉製成的頂級奶油，做出來的糕點更加香純濃郁。",
+	:filename => "about/material1.jpg"
+},
+{
+	:title => "石安牧場冷藏蛋",
+	:content => "產蛋雞以純天然穀植物及純天然萃取元素等餵養產蛋雞，飼料經ISO認證，蛋品經ISO22000、HACCP、CAS、產銷履歷認證，安全品質有信心，雖然比起一般雞蛋貴個２～３倍，但我堅持給大家最好的。",
+	:filename => "about/material2.jpg"
+},
+{
+	:title => "法國依斯尼鮮奶油",
+	:content => "Isigny由營養牧草飼育牛隻所產之牛乳，有如絲質般的組織和顏色。只有品質最佳的鮮奶才能被製作成Isigny法定產區鮮奶油，藉由獨特的發酵製程，鮮奶油能夠產生特殊的榛果風味及濃郁的奶香，是獨一無二的頂級鮮奶油！ ",
+	:filename => "about/material3.jpg"
+},
+{
+	:title => "鳥越製粉低筋麵粉 Ｓ豎琴（Ｓハープ）",
+	:content => "採用最高等級加拿大、美國產的小麥最中心部份研磨製程的小麥粉麵糊，糊穩定性佳、口感細緻柔軟。",
+	:filename => "about/material4.jpg"
+},
+{
+	:title => "純龍眼蜜",
+	:content => "雲林宮本農場出品100％純龍眼蜜。",
+	:filename => "about/material1.jpg"
+},
+{
+	:title => "加州杏仁粉",
+	:content => "選用美國加州杏仁研製而成，其甜度與香氣是杏仁粉中最優良的。",
+	:filename => "about/material1.jpg"
+},
+{
+	:title => "土耳其榛果粉",
+	:content => "選用品質最優良的土耳其榛果研製而成，有著濃郁的香氣。",
+	:filename => "about/material1.jpg"
+},
+{
+	:title => "天然香草豆莢",
+	:content => "不同於一般低成本的化學香草精，我選用最頂級的馬達加斯加品種香草莢，成本昂貴，取出其一粒一粒黑黑的香草籽添加在甜點裡可賦予甜點天然濃郁的香氣。",
+	:filename => "about/material1.jpg"
+},
+] %>
+
+<div id="sidetitle">關於咕迪</div>
+<div id="sidemenu">
+	<ul class="subitem">
+		<li><a href="#begin" class="anchorLink">咕迪緣起</a></li>
+		<li><a href="#persistence" class="anchorLink"><span>咕迪堅持</span></a></li>
+		<li><a href="#works" class="anchorLink" ><span>咕迪作品集</span></a></li>
+	</ul>
+</div>
+
+<div id="begin" name="begin" class="row">
+	<div class="container">
+		<%= image_tag ("about/shadow.png"), :class => "about-bg pull-right" %>
+		<%= image_tag ("about/Goodybakery2.png"), :class => "about-bg2 pull-right" %>
+
+		<div class="about-title">
+			<%= image_tag	("about/title.png") %>
+		</div>
+		<div class="about-content">
+			<p>就讀成大水利的我，自從女朋友生日為了做蛋糕給她，而開始了我對烘焙無法自拔的熱情！</p>
+
+			<p>大學生時間跟金錢有限，所以我常利用課餘時間在家照著食譜自學，長時間下來也慢慢累積了一定的水準。</p>
+			<p>後來考取了烘焙丙級，目前正計劃報考乙級，並且持續精進自己的手藝。</p>
+
+			<p>因為做甜點所花的材料費器材費也是一筆不小的花費，所以就想到了開線上烘焙的想法。</p>
+			<p>另一方面也可以用賺的錢補貼材料費，而不要用到家裡的錢；</p>
+			<p>一方面可以繼續精進我的手藝，並且將最好的烘焙作品分享給大家</p>
+			敬請期待！！</p>
+		</div>
+	</div>
+</div>
+
+<div id="persistence" name="persistence" class="row">
+	<div class="container">
+		<div class="about-title">
+			<%= image_tag	("about/title2.png") %>
+		</div>
+		<div class="about-content">
+			<p>現在市面上因為高物價，</p>
+			<p>很多店家賣的甜點價錢常常高得很不合理，</p>
+			<p>或是不斷壓低成本使用品質不好的材料，</p>
+			<p>身為大學生的我，即使阮囊羞澀，</p>
+			<p>還是盡量在用料上面使用最高級的，</p>
+			<p>希望客人都能在Ｇｏｏｄｙ這裡用合理的價格買到高品質的甜點，</p>
+			<p>是我的理想也是堅持。</p>
+		</div>
+		<div class="row" >
+			<%= image_tag ("about/fac.png"), :class => "pull-right" %>
+		</div>
+		<div class="row">
+			<%= image_tag ("about/shadow2.png"), :class => "about-bg2 pull-left" %>
+		</div>
+		<div class="row">
+			<%= image_tag ("about/materialtitle.png") %>
+		</div>
+		<div class="row">
+			<% material.each_with_index do |p| %>
+			<div class="material">
+				<div class="material-pic">
+					<%= image_tag(p[:filename], :width => 200) %>
+				</div>
+				<div class="material-title">
+					<%= p[:title] %>
+				</div>
+				<div class="material-content">
+					<%= p[:content] %>
+				</div>
+			</div>
+			<% end %>
+		</div>
+	</div>
+
+</div>
+
+<div id="works" name="works" class="row">
+	<div class="container">
+		<div class="about-title">
+			<%= image_tag	("about/title3.png") %>
+		</div>
+		<%= image_tag ("about/shadow3.png") %>
+		<div class="about-content">
+			<%= image_tag	("about/collection_template.jpg") %>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<%= render :partial => 'copyright' %>
+</div>
