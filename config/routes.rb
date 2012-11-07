@@ -5,11 +5,6 @@ Goody::Application.routes.draw do
   get "store/index", as: 'store'
   match 'store' => 'store#index'
 
-  resources :products do
-    get :who_bought, on: :member
-  end
-
-
   match 'about' => 'main#about'
   match 'contact' => 'main#contact'
   match 'faq' => 'main#faq'
