@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121108012501) do
+ActiveRecord::Schema.define(:version => 20121109163211) do
 
   create_table "carts", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20121108012501) do
     t.string   "image_url"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.datetime "date"
   end
 
 end
