@@ -3,7 +3,8 @@ class CartsController < ApplicationController
   # GET /carts.json
   def index
     @carts = Cart.all
-
+    @products = Product.all
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @carts }

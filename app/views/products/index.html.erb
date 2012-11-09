@@ -15,9 +15,15 @@
         <dd><%= truncate(strip_tags(product.description),
                length: 80) %></dd>
       </dl>
+      
     </td>
-
+    <td>
+      <% product.orders.each do |order| %>
+        <dt><%= order.name %>, <%= order.time_type %></dt>
+      <% end %>
+    </td>
     <td class="list_actions">
+      <%= product.quantity %><br/>
       <%= link_to 'Show', product %><br/>
       <%= link_to 'Edit', edit_product_path(product) %><br/>
       <%= link_to 'Destroy', product, 
@@ -25,6 +31,7 @@
                   method: :delete %>
     </td>
   </tr>
+  
 <% end %>
 </table>
 

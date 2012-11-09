@@ -4,7 +4,6 @@
 <% end %>
 
 <h1>Your Pragmatic Catalog</h1>
-
 <% @products.each do |product| %>
   <div class="entry">
     <%= image_tag(product.image_url) %>
@@ -12,8 +11,14 @@
     <%= simple_format(product.description) %>
     <div class="price_line">
       <span class="price"><%= number_to_currency(product.price) %></span>
+      <% if product.orders.size > product.quantity  %>
+        <p>已售完</p>
+      <% elsif %>
+      <p>剩餘數量</p>
+      <p><%= product.quantity - product.orders.size %></p>
       <%= button_to 'Add to Cart', line_items_path(product_id: product), 
       remote: true %>
+      <% end -%>
     </div>
   </div>
 <% end %>
