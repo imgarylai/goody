@@ -1,24 +1,25 @@
-
-<% if notice %>
-<p id="notice"><%= notice %></p>
-<% end %>
-
-<h1>Your Pragmatic Catalog</h1>
-<% @products.each do |product| %>
-  <div class="entry">
-    <%= image_tag(product.image_url) %>
-    <h3><%= product.title %></h3>
-    <%= simple_format(product.description) %>
-    <div class="price_line">
-      <span class="price"><%= number_to_currency(product.price) %></span>
+<div class="store-container">
+  <div class="row">
+  <div class="span12">
+    <div class="page-header">
+      <h1>購物清單</h1>
+    </div>
+    <div id="cart" class="well"></div>
+  </div>
+  <% @products.each do |product| %>
+      <div class="span4">
+      <%= image_tag(product.image_url, :class => 'img-polaroid ') %>
+      <%= simple_format(product.title) %>
+      <%= simple_format(product.description) %>
+      <%= number_to_currency(product.price) %>
       <% if product.orders.size < product.quantity  %>
-        <p>剩餘數量</p>
-        <p><%= product.quantity - product.orders.size %></p>
-        <%= button_to 'Add to Cart', line_items_path(product_id: product), 
-      remote: true %>
+        剩餘數量:
+        <%= product.quantity - product.orders.size %>
+        <%= button_to '加入購物車', line_items_path(product_id: product), :class => 'button', remote: true %>
       <% else %>
         <p>已售完</p>
       <% end -%>
-    </div>
+      </div>
+  <% end %>
   </div>
-<% end %>
+</div>

@@ -1,15 +1,19 @@
-<div class="cart_title">Your Cart</div>
+<div class="cart_title">你的購物車</div>
 <table>
   <%= render(cart.line_items) %>
   
   <tr class="total_line">
-    <td colspan="2">Total</td>
+    <td colspan="2">總共金額</td>
     <td class="total_cell"><%= number_to_currency(cart.total_price) %></td>
   </tr>
 
 </table>
 
-<!-- START_HIGHLIGHT -->
-
-<%= button_to 'Empty cart', cart, method: :delete, confirm: 'Are you sure?' %>
-<%= button_to "Checkout", new_order_path, method: :get %>
+<div class="row">	
+	<div class="span2">
+		<%= button_to "結帳", new_order_path, method: :get, :class => 'button' %>
+	</div>
+	<div class="span2">
+		<%= button_to '清空購物車', cart, method: :delete, confirm: 'Are you sure?', :class => 'button' %>
+	</div>
+</div>
