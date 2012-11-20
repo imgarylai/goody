@@ -12,15 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :名字 %><br />
     <%= f.text_field :name, size: 40 %>
   </div>
   <div class="field">
-    <%= f.label :time_type %><br />
+    <%= f.label :領取時間 %><br />
     <%= f.select :time_type, Order::TIME_TYPES,
     prompt: 'Select time' %>
   </div>
   <div class="actions">
-    <%= f.submit 'Order' %>
+    <%= f.submit 'Order', :class => 'button' %>
   </div>
 <% end %>

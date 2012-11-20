@@ -1,10 +1,29 @@
 <div class="store-container">
+  <% if flash[:notice] %>
+    <p class="notice"><%= flash[:notice] %></p>
+  <% end %>
   <div class="row">
   <div class="span12">
     <div class="page-header">
-      <h1>購物清單</h1>
+      <h1>你的購物車</h1>
     </div>
-    <div id="cart" class="well"></div>
+    <div id="cart" class="well">
+      <table>
+        <%= render(@cart.line_items) %>
+        <tr class="total_line">
+          <td colspan="2">總共金額</td>
+          <td class="total_cell"><%= number_to_currency(@cart.total_price) %></td>
+        </tr>
+      </table>
+      <div class="row"> 
+        <div class="span2">
+          <%= button_to "結帳", new_order_path, method: :get, :class => 'button' %>
+        </div>
+        <div class="span2">
+          <%= button_to '清空購物車', @cart, method: :delete, confirm: 'Are you sure?', :class => 'button' %>
+        </div>
+      </div>
+    </div>
   </div>
   <% @products.each do |product| %>
       <div class="span4">
