@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Goody Bakery</title>
-  <meta property="og:title" content="Goody Bakery" />
-	<meta property="og:type" content="food" />
-	<meta property="og:url" content="http://goody-bakery.com/" />
-	<meta property="og:image" content="http://sphotos-f.ak.fbcdn.net/hphotos-ak-ash3/564881_447062912002831_718004216_n.jpg" />
-	<meta property="og:site_name" content="Goody Bakery" />
-	<meta property="og:description" content="就讀成大水利的我，自從女朋友生日為了做蛋糕給她，而開始了我對烘焙無法自拔的熱情！大學生時間跟金錢有限，所以我常利用課餘時間在家照著食譜自學，長時間下來也慢慢累積了一定的水準。後來考取了烘焙丙級，目前正計劃報考乙級，並且持續精進自己的手藝。因為做甜點所花的材料費器材費也是一筆不小的花費，所以就想到了開線上烘焙的想法。另一方面也可以用賺的錢補貼材料費，而不要用到家裡的錢；一方面可以繼續精進我的手藝，並且將最好的烘焙作品分享給大家 敬請期待！！" />
-	<meta property="fb:admins" content="100003544640331" />
-
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body class='<%= controller.controller_name %>' bgcolor="#F4EEED">
-	<%= yield %>
-	<%= render :partial => 'main/footer_scripts' %>
-</body>
+  <head>
+    <title>Goody Bakery</title>
+    <meta property="og:title" content="Goody Bakery" />
+    <meta property="og:type" content="food" />
+    <meta property="og:url" content="http://goody-bakery.com/" />
+    <meta property="og:image" content="http://sphotos-f.ak.fbcdn.net/hphotos-ak-ash3/564881_447062912002831_718004216_n.jpg" />
+    <meta property="og:site_name" content="Goody Bakery" />
+    <meta property="og:description" content="就讀成大水利的我，自從女朋友生日為了做蛋糕給她，而開始了我對烘焙無法自拔的熱情！大學生時間跟金錢有限，所以我常利用課餘時間在家照著食譜自學，長時間下來也慢慢累積了一定的水準。後來考取了烘焙丙級，目前正計劃報考乙級，並且持續精進自己的手藝。因為做甜點所花的材料費器材費也是一筆不小的花費，所以就想到了開線上烘焙的想法。另一方面也可以用賺的錢補貼材料費，而不要用到家裡的錢；一方面可以繼續精進我的手藝，並且將最好的烘焙作品分享給大家 敬請期待！！" />
+    <meta property="fb:admins" content="100003544640331" />
+    <%= favicon_link_tag 'favicon.ico' %>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body class='<%= controller.controller_name %>' bgcolor="#F4EEED">
+    <%= yield %>
+    <%= render :partial => 'main/footer_scripts' %>
+  </body>
 </html>
