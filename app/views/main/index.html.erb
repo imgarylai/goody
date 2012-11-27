@@ -8,7 +8,8 @@
 
 <div id="sale-info-box">
   <div id="sale"> </div>
-  <div id="sale-info-date"><%= @products.last.date %></div>
+  <div id="sale-info-date"></div>
+  <div id="sale-info-time"><%= @products.last.date.to_formatted_s(:db)  %></div>
   <div id="sale-info-title"><%= @products.last.title %></div>
   <div id="sale-info-line"> </div>
   <div id="sale-info-content"><%= @products.last.description %> </div>

@@ -199,11 +199,27 @@
 	line-height:80px;
 	text-indent: 10px;
 	}
+
+#sale-info-time{
+	position: absolute;
+	left:17px;
+	top:60px;
+	width:251px;
+	height:32px;
+	background-image: url(stucker/stucker03.png);
+	background-repeat:no-repeat;
+	font-size:22px;
+	letter-spacing:2px;
+	text-align:left;
+	font-size:14px;
+	text-indent: 26px;
+	color: #F17F5B;
+}
 	
 #sale-info-title{
 	position: absolute;
 	left:17px;
-	top:60px;
+	top:92px;
 	width:251px;
 	height:32px;
 	background-image: url(stucker/stucker03.png);
@@ -220,7 +236,7 @@
 #sale-info-line{
 	position: absolute;
 	left:17px;
-	top:92px;
+	top:124px;
 	width:251px;
 	height:9px;
 	background-image: url(stucker/stucker04.png);
@@ -230,7 +246,7 @@
 #sale-info-content{
 	position: absolute;
 	left:17px;
-	top:101px;
+	top:133px;
 	width:191px;
 	height:76px;
 	padding:3px 61px 0px 26px;
@@ -244,7 +260,7 @@
 #sale-info-price{
 	position: absolute;
 	left:17px;
-	top:177px;
+	top:209px;
 	width:251px;
 	height:32px;
 	background-image: url(stucker/stucker06.png);
@@ -260,7 +276,7 @@
 #sale-info-buy{
 	position: absolute;
 	left:17px;
-	top:209px;
+	top:241px;
 	width:251px;
 	height:54px;
 	background-image: url(stucker/stucker07.png);
@@ -272,7 +288,7 @@
 	display:none;
 	position: absolute;
 	left:17px;
-	top:101px;
+	top:295px;
 	width:251px;
 	height:108px;
 	background-image: url(stucker/stuckerhover.png);
