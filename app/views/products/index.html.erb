@@ -1,40 +1,32 @@
-
-<h1>Listing products</h1>
-
-<table>
-<% @products.each do |product| %>
-  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
-
-    <td>
-      <%= image_tag(product.image_url, class: 'list_image') %>
-    </td>
-
-    <td class="list_description">
-      <dl>
-        <dt><%= product.title %></dt>
-        <dd><%= truncate(strip_tags(product.description),
-               length: 80) %></dd>
-      </dl>
-      
-    </td>
-    <td>
-      <% product.orders.each do |order| %>
-        <dt><%= order.name %>, <%= order.time_type %></dt>
-      <% end %>
-    </td>
-    <td class="list_actions">
-      <%= product.quantity %><br/>
-      <%= link_to 'Show', product %><br/>
-      <%= link_to 'Edit', edit_product_path(product) %><br/>
-      <%= link_to 'Destroy', product, 
-                  confirm: 'Are you sure?',
-                  method: :delete %>
-    </td>
-  </tr>
+<div class="store-container">
+  <div class="row">
+    <div class="well">
+      <%= link_to 'New', new_product_path, :class => 'button' %>
+    </div>
+  </div>
   
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New product', new_product_path %>
+  <% @products.each do |product| %>
+  <div class="row well">  
+    <div class="span2">
+      <%= image_tag(product.image_url) %>
+    </div>
+    <div class="span7">
+      產品名稱：<%= product.title %><br />
+      描述：<%= truncate(strip_tags(product.description),length: 80) %><br />
+      剩餘數量：<%= product.quantity - product.orders.size %><br/>
+      訂單：<br/>
+      <% product.orders.each do |order| %>
+        <%= order.name %>, <%= order.time_type %><br />
+      <% end %>
+    </div>
+    <div class="span2">
+      <%= link_to 'Show', product %><br />
+      <%= link_to 'Edit', edit_product_path(product) %><br />
+      <%= link_to 'Destroy', product, 
+        confirm: 'Are you sure?',
+        method: :delete %>
+    </div>
+    </div>
+  <% end %>  
+  
+</div>

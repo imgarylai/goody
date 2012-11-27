@@ -29,6 +29,9 @@
   <%= @product.date %>
 </p>
 
+<% @product.orders.each do |order| %>
+  <p><%= order.name %>, <%= order.time_type %></p>
+<% end %>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
