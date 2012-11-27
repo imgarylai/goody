@@ -26,6 +26,7 @@
     </div>
   </div>
   <% @products.each do |product| %>
+    <% if product.date < Time.now %>
       <div class="span4">
       <%= image_tag(product.image_url, :class => 'img-polaroid ') %>
       <div class="quantity"><% if product.orders.size < product.quantity  %>
@@ -40,6 +41,7 @@
       <div class="description"><%= simple_format(product.description) %></div>
       <div class="price"><%= number_to_currency(product.price) %></div>
       </div>
+    <% end %>
   <% end %>
   </div>
 </div>
