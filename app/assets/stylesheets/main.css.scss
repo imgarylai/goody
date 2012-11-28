@@ -52,10 +52,19 @@
 	font-size:14px;
 	letter-spacing:6px;
 }
-.item li{
+
+.item li:nth-child(1n + 2){
 	float:left;
 	background:url(menu/menu.png) repeat-x top;
 	padding:0px 17px 0px 17px;
+	margin:0 auto;
+	list-style-type:none;
+	line-height:30px;
+	cursor:pointer;
+}
+.item li:first-child{
+	float:left;
+	padding:0px 0px 0px 17px;
 	margin:0 auto;
 	list-style-type:none;
 	line-height:30px;
@@ -71,7 +80,7 @@
 	padding-top:5px;
 }
 	   
-.item li a:hover{
+.item li:nth-child(1n + 2) a:hover{
 	display:block;
 	float:left;
 	background:url(menu/menu2.png) no-repeat top;
@@ -262,7 +271,6 @@
 	top:241px;
 	width:251px;
 	height:54px;
-	background-image: url(stucker/stucker07.png);
 	background-repeat:no-repeat;
 	cursor:pointer;
 }
