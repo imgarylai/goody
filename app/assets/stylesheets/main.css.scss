@@ -125,7 +125,8 @@
 	left:30px;
 	width:40px;
 	height:40px;
-	background-image:url(slider/prev2.png);
+	background:url(slider/result.png);
+	background-position: 0px 8px;
 	background-repeat: no-repeat;
 	cursor:pointer;
 }
@@ -137,7 +138,8 @@
 	right:10px;
 	width:50px;
 	height:50px;
-	background-image:url(slider/next2.png);
+	background:url(slider/result.png);
+	background-position: 0px -36px;
 	background-repeat: no-repeat;
 	cursor:pointer;
 }
