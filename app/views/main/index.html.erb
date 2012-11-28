@@ -1,9 +1,9 @@
 <%= render :partial => 'main/header' %> 
 <div id="todayreminder" style="text-align:center;"></div>
 <div id="slider">
-  <div class="show1"></div>
-  <div class="show2"></div>
-  <div class="show3"></div>
+  <% @products_image.each do |image| %>
+    <%= image_tag image.image_url, :class => "show" %>
+  <% end %>
 </div>
 
 <div id="sale-info-box">

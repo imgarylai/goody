@@ -1067,7 +1067,7 @@ $.fn.cycle.defaults = {
     timeout:          4000,     // milliseconds between slide transitions (0 to disable auto advance)
     timeoutFn:        null,     // callback for determining per-slide timeout value:  function(currSlideElement, nextSlideElement, options, forwardFlag)
     updateActivePagerLink: null,// callback fn invoked to update the active pager link (adds/removes activePagerClass style)
-    width:            null      // container width (if the 'fit' option is true, the slides will be set to this width as well)
+    width:            true      // container width (if the 'fit' option is true, the slides will be set to this width as well)
 };
 
 })(jQuery);
