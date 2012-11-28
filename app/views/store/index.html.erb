@@ -1,47 +1,54 @@
 <div class="store-container">
-  <% if flash[:notice] %>
-    <p class="notice"><%= flash[:notice] %></p>
-  <% end %>
   <div class="row">
-  <div class="span12">
-    <div class="page-header">
-      <h1>你的購物車</h1>
+    <div class="span6">
+      <%= link_to image_tag("title.png"), 
+        :action => 'index', 
+        :controller => 'main' %>
     </div>
-    <div id="cart" class="well">
-      <table>
-        <%= render(@cart.line_items) %>
-        <tr class="total_line">
-          <td colspan="2">總共金額</td>
-          <td class="total_cell"><%= number_to_currency(@cart.total_price) %></td>
-        </tr>
-      </table>
-      <div class="row"> 
-        <div class="span2">
-          <%= button_to "結帳", new_order_path, method: :get, :class => 'button' %>
-        </div>
-        <div class="span2">
-          <%= button_to '清空購物車', @cart, method: :delete, confirm: 'Are you sure?', :class => 'button' %>
+    <div class="span6">
+      <div class="page-header">
+        <h1>你的購物車</h1>
+      </div>
+      <div id="cart" class="well">
+        <table>
+          <%= render(@cart.line_items) %>
+          <tr class="total_line">
+            <td colspan="2">總共金額</td>
+            <td class="total_cell"><%= number_to_currency(@cart.total_price) %></td>
+          </tr>
+        </table>
+        <div class="row"> 
+          <div class="span2">
+            <%= button_to "結帳", new_order_path, method: :get, :class => 'button' %>
+          </div>
+          <div class="span2">
+            <%= button_to '清空購物車', @cart, method: :delete, confirm: 'Are you sure?', :class => 'button' %>
+          </div>
         </div>
       </div>
+      <% if flash[:notice] %>
+        <p class="notice"><%= flash[:notice] %></p>
+      <% end %>
     </div>
   </div>
-  <% @products.each do |product| %>
-    <% if product.date < Time.now %>
-      <div class="span4">
-      <%= image_tag(product.image_url, :class => 'img-polaroid ') %>
-      <div class="quantity"><% if product.orders.size < product.quantity  %>
-        剩餘數量:
-        <%= product.quantity - product.orders.size %>
-        <%= button_to '加入購物車', line_items_path(product_id: product), :class => 'button', remote: true %>
-      <% else %>
-        <p>已售完</p>
-      <% end -%>
-      </div>
-      <div class="title"><%= simple_format(product.title) %></div>
-      <div class="description"><%= simple_format(product.description) %></div>
-      <div class="price"><%= number_to_currency(product.price) %></div>
-      </div>
+   <div class="row">
+    <% @products.each do |product| %>
+      <% if product.date < Time.now %>
+        <div class="span4">
+        <%= image_tag(product.image_url, :class => 'img-polaroid ') %>
+        <div class="quantity"><% if product.orders.size < product.quantity  %>
+          剩餘數量:
+          <%= product.quantity - product.orders.size %>
+          <%= button_to '加入購物車', line_items_path(product_id: product), :class => 'button', remote: true %>
+        <% else %>
+          <p>已售完</p>
+        <% end -%>
+        </div>
+        <div class="title"><%= simple_format(product.title) %></div>
+        <div class="description"><%= simple_format(product.description) %></div>
+        <div class="price"><%= number_to_currency(product.price) %></div>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
   </div>
 </div>
