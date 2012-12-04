@@ -4,7 +4,7 @@ class Order < ActiveRecord::Base
   has_many :line_items, dependent: :destroy
   has_many :product ,:through => :line_items, :dependent => :destroy
 
-  TIME_TYPES = [ "Morning", "Noon" ]
+  TIME_TYPES = [ "A", "B" ]
 
   validates :name, :time_type, presence: true
   validates :time_type, inclusion: TIME_TYPES
