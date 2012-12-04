@@ -2,7 +2,7 @@ class MainController < ApplicationController
 
 	def index
 		@products = Product.all
-		@products_image = Product.limit(4).reverse
+		@images = Photo.all
 	end
 
 end

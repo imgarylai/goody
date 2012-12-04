@@ -1,5 +1,7 @@
 Goody::Application.routes.draw do
 
+  resources :photos
+
   resources :orders
 
   resources :line_items
@@ -16,6 +18,7 @@ Goody::Application.routes.draw do
   match 'faq' => 'main#faq'
   match 'all' => 'orders#all'
 
+  match 'admin' => 'main#goody_admin'
 
   match 'auth/:provider/callback', to: 'sessions#create'
   match 'auth/failure', to: redirect('/')

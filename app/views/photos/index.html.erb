@@ -1,0 +1,17 @@
+<div class="store-container">
+  <h1>Listing photos</h1>
+  <%= link_to 'New Photo', new_photo_path %>
+  <% @photos.each do |photo| %>
+    <div class="row well">  
+      <div class="span2">
+        <%= image_tag(photo.img_url) %>
+      </div>
+      <div class="span2">
+        <%= link_to 'Show', photo %><br />
+        <%= link_to 'Edit', edit_photo_path(photo) %><br />
+        <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    </div>
+  <% end %>
+  
+</div>
