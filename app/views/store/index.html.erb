@@ -33,7 +33,7 @@
   </div>
    <div class="row">
     <% @products.each do |product| %>
-      <% if product.date < Time.now %>
+      <% if product.date < Time.zone.now %>
         <div class="span4">
         <%= image_tag(product.image_url, :class => 'img-polaroid ') %>
         <div class="quantity"><% if product.orders.size < product.quantity  %>
