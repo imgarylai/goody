@@ -2,7 +2,7 @@ class Order < ActiveRecord::Base
   attr_accessible :name, :time_type
 
   has_many :line_items, dependent: :destroy
-  has_many :product ,:through => :line_items
+  has_many :product ,:through => :line_items, :dependent => :destroy
 
   TIME_TYPES = [ "Morning", "Noon" ]
 
