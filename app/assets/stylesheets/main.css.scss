@@ -1,7 +1,3 @@
-// Place all the styles related to the main controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 .navbar{
 	position: fixed;
 	margin-left:2%;
@@ -79,7 +75,7 @@
 	display:block;
 	padding-top:5px;
 }
-	   
+
 .item li:nth-child(1n + 2) a:hover{
 	display:block;
 	float:left;
@@ -208,7 +204,7 @@
 	text-indent: 26px;
 	color: #F17F5B;
 }
-	
+
 #sale-info-title{
 	position: absolute;
 	left:17px;
@@ -247,7 +243,7 @@
 	background-repeat:no-repeat;
 	font-size:12px;
 	line-height:18px;
-	color: #2D3C40;	
+	color: #2D3C40;
 }
 
 #sale-info-price{
@@ -350,7 +346,7 @@
 	text-indent:30px;
 	padding:10px;
 }
-	
+
 #sidemenu{
 	position:fixed;
 	padding:15px;
@@ -384,7 +380,7 @@
 	display:block;
 	text-decoration:none;
 }
-	   
+
 .subitem li a:hover{
 	display:block;
 	background:url(menu/sidemenu2.png) repeat-y right;
@@ -419,16 +415,16 @@
 	font-size: 13px;
 	color:#594F4B;
 }
-	
+
 #faqtitle{
 	position:absolute;
 	top:55px;
 	left:125px;
-	background-image: url(faq/faqtitle.png);	
+	background-image: url(faq/faqtitle.png);
 	width:205px;
 	height:57px;
 }
-	
+
 #faqboard{
 	position:absolute;
 	top:150px;
@@ -437,7 +433,6 @@
 	height:483px;
 }
 
-	
 #contact{
 	;
 	position:absolute;
@@ -454,7 +449,7 @@
 	position:absolute;
 	top:55px;
 	left:125px;
-	background-image: url(contact/contacttitle.png);	
+	background-image: url(contact/contacttitle.png);
 	width:205px;
 	height:57px;
 }
@@ -478,7 +473,7 @@
 	width:200px;
 	height:53px;
 	}
-	
+
 #mail{
 	position:absolute;
 	top:160px;
@@ -486,7 +481,7 @@
 	width:200px;
 	height:53px;
 	}
-	
+
 #contactbg{
 	position:absolute;
 	bottom:0;
@@ -494,9 +489,8 @@
 	z-index:-5;
 	background-image:url(contact/contactbg.png);
 	width:724px;
-	height:600px;	
+	height:600px;
 }
-
 
 #copyright{
 	position:absolute;
